@@ -52,13 +52,18 @@ class Apriori:
 def main():
     st.title("Apriori Algorithm for Association Rule Mining")
 
-    dataset = st.text_area("Enter your dataset (each transaction on a new line):", value=
+    dataset = st.text_area("Enter your dataset (each transaction on a new line, items separated by commas):", value=
     """
-    bread, milk
-    bread, diaper, beer, egg
-    milk, diaper, beer, cola
-    bread, milk, diaper, beer
-    bread, milk, diaper, cola
+    laptop, mouse, keyboard, charger
+    laptop, mouse, headphones
+    laptop, mouse, keyboard, USB drive
+    laptop, keyboard, charger
+    mouse, keyboard, charger
+    keyboard, USB drive
+    laptop, mouse, charger
+    laptop, keyboard, charger
+    mouse, headphones
+    keyboard, USB drive, headphones
     """)
 
     transactions = [set(line.strip().split(', ')) for line in dataset.split('\n') if line.strip()]
