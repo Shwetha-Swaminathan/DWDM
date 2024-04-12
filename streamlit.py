@@ -1,4 +1,4 @@
-  import streamlit as st
+import streamlit as st
 from itertools import combinations
 
 class Apriori:
